@@ -1,0 +1,185 @@
+:root {
+    --primary-bg: #4b4a45;
+    --secondary-bg: #595852;
+    --primary-col: #e5e5e5;
+    --secondary-col: #c9c9c9;
+    --dark-col: grey;
+    --primary-acc: #9bc473;
+    --secondary-acc: #e9e518;
+}
+
+body {
+    background-color: var(--primary-bg);
+    max-width: none;
+}
+
+#timer-span, #timer-button-span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+#timer-span {
+    width: 100px;
+}
+
+#timer {
+    color: var(--primary-col);
+}
+
+#timer-button {
+    width: 130px;
+    height: fit-content;
+}
+
+.row-header {
+    text-align: center;
+    vertical-align: middle;
+    height: 70px;
+    max-height: 70px;
+    width: 40px;
+}
+
+.col-header {
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    width: 70px;
+    max-width: 70px;
+    overflow: auto;
+}
+
+th {
+    font-size: 20pt;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    max-height: 70px;
+    max-width: 70px;
+}
+
+td:hover {
+    box-shadow: 0 0 5px 2px var(--secondary-acc);
+    z-index: 1;
+    position: relative;
+}
+
+td img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: #EEEED2;
+}
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+    background-color: #7ca552;
+}
+
+.page {
+    padding: 10px;
+    text-align: center;
+}
+
+.chess-board {
+    height: max-content;
+    width: max-content;
+    color: var(--secondary-col);
+}
+
+.chess-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.authorize-block {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 400px;
+    margin-left: 50px;
+    padding: 30px 20px;
+
+    border: 5px solid var(--secondary-col);
+    border-radius: 10px;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-col);
+}
+
+.authorize-block > div {
+    width: 90%;
+    padding: 0px;
+    margin: auto auto 10px auto;
+}
+
+.log-in-header {
+    color: var(--primary-col);
+    margin: 0px 0px 30px 0px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.form-control {
+    margin: 0;
+    color: var(--primary-col);
+    background-color: var(--primary-bg);
+    border: 3px solid var(--secondary-col);
+    transition: all 0.2s ease;
+}
+
+.form-control:hover {
+    background-color: var(--secondary-bg);
+}
+
+.form-control::placeholder {
+    color: var(--dark-col);
+}
+
+.form-control:focus {
+    color: var(--primary-col);
+    background-color: var(--secondary-bg);
+    box-shadow: none;
+    border-color: var(--primary-col);
+}
+
+.btn, .btn-light, .btn:focus, .btn-light:focus {
+    width: 50%;
+    font-weight: bold;
+    margin: 10px;
+    color: var(--primary-bg);
+    font-size: 14pt;
+}
+
+.btn:hover, .btn-light:hover {
+    color: var(--dark-col);
+}
+
+a {
+    color: var(--secondary-col);
+}
+
+a:hover {
+    color: var(--primary-acc);
+}
+
+.alert {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.alert-icon {
+    height: 0.8em;
+    margin-right: 5px;
+}
+
+.chart-block {
+    height: 350px;
+    margin: 50px;
+}
