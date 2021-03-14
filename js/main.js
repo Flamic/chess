@@ -1,7 +1,7 @@
 const matrix = document.getElementById('main-matrix').children;
 const chartCanvas = document.getElementById('pieces-chart');
-const IMAGE_PATH = 'img';
-const IMAGE_FORMAT = 'png';
+const timerLabel = document.getElementById('timer');
+const timerButton = document.getElementById('timer-button');
 
 const COLOR = {
     white: 'w',
@@ -16,29 +16,8 @@ const PIECE = {
     king: 'k'
 };
 
-class ChessPiece {
-    color;
-    type;
-    row;
-    col;
-
-    constructor (color, type, row, col) {
-        this.color = color;
-        this.type = type;
-        this.row = row;
-        this.col = col;
-    }
-
-    get imageSource() {
-        return `${IMAGE_PATH}/${this.color}${this.type}.${IMAGE_FORMAT}`;
-    }
-
-    get image() {
-        let img = document.createElement('img');
-        img.src = this.imageSource;
-        return img;
-    }
-}
+let timer = null;
+let timerDate = new Date(0);
 
 let piecesList = [
     new ChessPiece(COLOR.white, PIECE.rook, 1, 1),
@@ -73,14 +52,7 @@ let piecesList = [
     new ChessPiece(COLOR.black, PIECE.rook, 8, 8)
 ];
 
-let piecesCount = [
-    piecesList.filter(piece => piece.type === PIECE.pawn).length,
-    piecesList.filter(piece => piece.type === PIECE.rook).length,
-    piecesList.filter(piece => piece.type === PIECE.knight).length,
-    piecesList.filter(piece => piece.type === PIECE.bishop).length,
-    piecesList.filter(piece => piece.type === PIECE.queen).length,
-    piecesList.filter(piece => piece.type === PIECE.king).length
-];
+let piecesCount = Object.keys(PIECE).map(enumPiece => piecesList.filter(piece => piece.type === PIECE[enumPiece]).length);
 
 let piecesChart = new Chart(chartCanvas, {
     type: 'horizontalBar',
@@ -147,12 +119,6 @@ let piecesChart = new Chart(chartCanvas, {
         }
     }
 });
-
-const timerLabel = document.getElementById('timer');
-const timerButton = document.getElementById('timer-button');
-let timer = null;
-let timerTicks = 0;
-let timerDate = new Date(0);
 
 function onLoad() {
     for (const piece of piecesList) {
