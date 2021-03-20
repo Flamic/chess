@@ -167,7 +167,6 @@ function hideBlock(block) {
 
 function startTimer() {
     if (timer == null) {
-        timerLabel.innerHTML = '00:00';
         timerButton.innerHTML = 'Stop';
         timer = setInterval(() => {
             timerDate.addSeconds(1);
@@ -178,7 +177,6 @@ function startTimer() {
         timerButton.innerHTML = 'Start';
         clearTimeout(timer);
         timer = null;
-        timerDate.setTime(0);
     }
 }
 
