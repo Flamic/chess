@@ -1,0 +1,20 @@
+.logo-img {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.brand-text {
+    color: rgb(219, 219, 219);
+    vertical-align: middle;
+}
+
+.nav-menu {
+    font-size: medium;
+}
+
+.btn-sign {
+    font-size: large;
+    min-width: 100px;
+}

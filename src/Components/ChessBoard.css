@@ -51,5 +51,6 @@ tr:nth-child(even) td:nth-child(even) {
 .chess-board {
     height: max-content;
     width: max-content;
+    margin: auto;
     color: var(--light);
 }
