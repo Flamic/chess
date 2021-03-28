@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ExternalLinks from '../ExternalLinks.js'
+import * as ExternalLinks from '../Data/ExternalLinks'
 import { Carousel } from 'react-bootstrap'
 import chess_board from '../Images/chess_board.jpg'
 import chess_puzzles from '../Images/chess_puzzles.png'
@@ -13,7 +13,7 @@ export default function Slider() {
                 <img
                     className="d-block w-100 align-self-center"
                     src={chess_board}
-                    alt="Play chess"
+                    alt="Play chess"W
                 />
             <Carousel.Caption>
                 <a
@@ -35,7 +35,7 @@ export default function Slider() {
 
               <Carousel.Caption>
                 <a
-                    href={ExternalLinks.PUZZLE_LINK}
+                    href={ExternalLinks.PUZZLES_LINK}
                     target="_blank"
                     rel="noreferrer"
                     className="item-head"

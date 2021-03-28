@@ -24,6 +24,7 @@ td {
     vertical-align: middle;
     max-height: 70px;
     max-width: 70px;
+    padding: 0 !important;
 }
 
 td:hover {
@@ -45,7 +46,7 @@ tr:nth-child(even) td:nth-child(odd) {
 
 tr:nth-child(odd) td:nth-child(odd),
 tr:nth-child(even) td:nth-child(even) {
-    background-color: #7ca552;
+    background-color: var(--secondary)/*#7ca552*/;
 }
 
 .chess-board {

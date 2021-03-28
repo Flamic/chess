@@ -18,3 +18,24 @@
     font-size: large;
     min-width: 100px;
 }
+
+.player-img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.player {
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.player-text {
+    color: rgb(219, 219, 219);
+    font-size: 14pt;
+    font-weight: 700;
+    display: inline-block;
+}

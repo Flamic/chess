@@ -1,23 +1,57 @@
 import React from 'react'
+import { Table } from 'react-bootstrap'
 import './ChessBoard.css'
+import wp from '../Images/wp.png'
+import wr from '../Images/wr.png'
+import wn from '../Images/wn.png'
+import wb from '../Images/wb.png'
+import wq from '../Images/wq.png'
+import wk from '../Images/wk.png'
+import bp from '../Images/bp.png'
+import br from '../Images/br.png'
+import bn from '../Images/bn.png'
+import bb from '../Images/bb.png'
+import bq from '../Images/bq.png'
+import bk from '../Images/bk.png'
 
-export default function ChessBoard() {
-    return (
-        <table className="chess-board">
-            <ChessBoardHead inversed />
-            {Array.from({ length: 8 }).map((e, i) => (<ChessBoardRow index={i + 1} />))}
-            <ChessBoardHead inversed />
-        </table>
-    )
-}
+const pieceType = {
+    "wp" : wp,
+    "wr" : wr,
+    "wn" : wn,
+    "wb" : wb,
+    "wq" : wq,
+    "wk" : wk,
+    "bp" : bp,
+    "br" : br,
+    "bn" : bn,
+    "bb" : bb,
+    "bq" : bq,
+    "bk" : bk
+};
 
-function ChessBoardRow({index}) {
+export default function ChessBoard({data}) {
     return (
-        <tr key={index}>
-            <th className="row-header">{index}</th>
-            {Array.from({ length: 8 }).map((e, i) => (<td key={i}></td>))}
-            <th className="row-header">{index}</th>
-        </tr>
+        <Table className="chess-board" borderless>
+            <ChessBoardHead inversed />
+            {
+                Array.from({ length: 8 }).map((ei, i) =>
+                    <tr key={i}>
+                    <th className="row-header">{i+1}</th>
+                    {
+                        Array.from({ length: 8 }).map((ej, j) => 
+                            <td key={j}>
+                            {
+                                pieceToImage(data.piecesList.find(piece => piece.row === i+1 && piece.col === j+1))
+                            }
+                            </td>
+                        )
+                    }
+                    <th className="row-header">{i+1}</th>
+                    </tr>
+                )
+            }
+            <ChessBoardHead inversed />
+        </Table>
     )
 }
 
@@ -51,4 +85,12 @@ function prevChar(obj) {
     let lastCh = obj.character;
     obj.character = String.fromCharCode(obj.character.charCodeAt(0)-1);
     return lastCh;
+}
+
+function pieceToImage(piece) {
+    return piece
+    ? (
+        <img src={pieceType[piece.type]} alt='' />
+    )
+    : null
 }

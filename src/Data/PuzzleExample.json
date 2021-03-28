@@ -1,0 +1,154 @@
+{
+    "piecesList": [
+        {
+            "type": "wr",
+            "row": 1,
+            "col": 1
+        },
+        {
+            "type": "wk",
+            "row": 1,
+            "col": 4
+        },
+        {
+            "type": "wq",
+            "row": 1,
+            "col": 5
+        },
+        {
+            "type": "wb",
+            "row": 1,
+            "col": 6
+        },
+        {
+            "type": "wn",
+            "row": 1,
+            "col": 7
+        },
+        {
+            "type": "wr",
+            "row": 1,
+            "col": 8
+        },
+        {
+            "type": "wp",
+            "row": 2,
+            "col": 1
+        },
+        {
+            "type": "bb",
+            "row": 2,
+            "col": 3
+        },
+        {
+            "type": "wn",
+            "row": 2,
+            "col": 4
+        },
+        {
+            "type": "wp",
+            "row": 2,
+            "col": 6
+        },
+        {
+            "type": "wp",
+            "row": 2,
+            "col": 7
+        },
+        {
+            "type": "wp",
+            "row": 2,
+            "col": 8
+        },
+        {
+            "type": "wp",
+            "row": 3,
+            "col": 3
+        },
+        {
+            "type": "bp",
+            "row": 3,
+            "col": 5
+        },
+        {
+            "type": "wb",
+            "row": 3,
+            "col": 7
+        },
+        {
+            "type": "wp",
+            "row": 4,
+            "col": 1
+        },
+        {
+            "type": "bn",
+            "row": 4,
+            "col": 4
+        },
+        {
+            "type": "wp",
+            "row": 5,
+            "col": 4
+        },
+        {
+            "type": "bp",
+            "row": 5,
+            "col": 5
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 1
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 2
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 3
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 6
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 7
+        },
+        {
+            "type": "bp",
+            "row": 7,
+            "col": 8
+        },
+        {
+            "type": "br",
+            "row": 8,
+            "col": 1
+        },
+        {
+            "type": "bk",
+            "row": 8,
+            "col": 4
+        },
+        {
+            "type": "bb",
+            "row": 8,
+            "col": 6
+        },
+        {
+            "type": "bn",
+            "row": 8,
+            "col": 7
+        },
+        {
+            "type": "br",
+            "row": 8,
+            "col": 8
+        }
+    ]
+}
